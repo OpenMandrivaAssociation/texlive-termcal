@@ -56,3 +56,16 @@ flows around nonclass days.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.8-2
++ Revision: 756589
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.8-1
++ Revision: 719669
+- texlive-termcal
+- texlive-termcal
+- texlive-termcal
+
