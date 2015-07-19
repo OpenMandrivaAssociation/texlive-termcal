@@ -6,7 +6,7 @@
 # catalog-version 1.8
 Name:		texlive-termcal
 Version:	1.8
-Release:	9
+Release:	10
 Summary:	Print a class calendar
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/termcal
