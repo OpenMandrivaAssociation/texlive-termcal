@@ -1,19 +1,13 @@
-# revision 22514
-# category Package
-# catalog-ctan /macros/latex/contrib/termcal
-# catalog-date 2011-05-17 01:53:44 +0200
-# catalog-license lppl1
-# catalog-version 1.8
 Name:		texlive-termcal
-Version:	1.8
-Release:	11
+Version:	22514
+Release:	1
 Summary:	Print a class calendar
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/termcal
 License:	LPPL1
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ may be inserted into consecutive days so that it automatically
 flows around nonclass days.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -49,23 +43,11 @@ flows around nonclass days.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.8-2
-+ Revision: 756589
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.8-1
-+ Revision: 719669
-- texlive-termcal
-- texlive-termcal
-- texlive-termcal
-
