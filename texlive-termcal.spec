@@ -1,6 +1,6 @@
 Name:		texlive-termcal
 Version:	22514
-Release:	1
+Release:	2
 Summary:	Print a class calendar
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/termcal
