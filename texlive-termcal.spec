@@ -3,7 +3,7 @@ Version:	22514
 Release:	2
 Summary:	Print a class calendar
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/termcal
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/termcal
 License:	LPPL1
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/termcal.doc.r%{version}.tar.xz
